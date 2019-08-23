@@ -12,12 +12,12 @@
 
 (2) 제작 결과
 
-	- 음성인식 API : 사용자의 음성을 입력받고 분석하기 위해 웹에서 작동하는 음성인식 API인 ‘Annyang’과 ‘SpeechSynthesis’를 사용하였다. Annyang은 Asynchronous Speech Recognition에 해당하는 음성인식 기술로, 사용자가 말했을 때 이를 Text로 변환시켜주는 API이고, SpeechSynthesis는 Text-to-Speech에 해당하는 음성인식 기술로, 문자를 음성으로 변환해 내보내는 API이다.
+	- 음성인식 API : 사용자의 음성을 입력받고 분석하기 위해 웹에서 작동하는 음성인식 API인 ‘Annyang’과 ‘SpeechSynthesis’를 사용하였다.<br> Annyang은 Asynchronous Speech Recognition에 해당하는 음성인식 기술로, 사용자가 말했을 때 이를 Text로 변환시켜주는 API이고, SpeechSynthesis는 Text-to-Speech에 해당하는 음성인식 기술로, 문자를 음성으로 변환해 내보내는 API이다.
  즉, Annyang API를 통해 사용자의 음성을 입력받아 문자열로 변환하여 분석 후, 결과를 SpeechSynthesis를 통해 문자를 소리로 변환해 사용자에게 알려주는 기능을 한다.
 
 	- Web Application : Web Application을 구현하기 위해 Node.js의 Express 프레임워크를 사용하여 서버를 구성하였고, 웹페이지 템플릿은 Bootstrap4 기초 템플릿을 활용하여 AJAX를 사용하여 비동기적으로 데이터를 불러오며, JQuery, CSS등을 이용하여 역동적인 Front를 개발하였다. 또한 Google Material Design의 다양한 Component를 불러와 구현하였다.
 
- 	- DataBase : AWS의 RDS를 사용하여, 데이터베이스 서버를 구축하였다. 데이터베이스는 이마트에서 제공한 emart24 매장 내 제품 목록, 가격, 재고 수량 등의 데이터를 토대로 DB의 Product Table를 만들었으며, 사용자의 음성인식 결과를 Query문에 활용하여, 찾고자하는 상품의 정보를 사용자에게 알려	줄 수 있으며, 또한 Recommendation Table로 추천 상품 서비스를 제공할 수 있다. 
+ 	- DataBase : AWS의 RDS를 사용하여, 데이터베이스 서버를 구축하였다. 데이터베이스는 이마트에서 제공한 emart24 매장 내 제품 목록, 가격, 재고 수량 등의 데이터를 토대로 DB의 Product Table를 만들었으며, 사용자의 음성인식 결과를 Query문에 활용하여, 찾고자하는 상품의 정보를 사용자에게 알려줄 수 있으며, 또한 Recommendation Table로 추천 상품 서비스를 제공할 수 있다. 
 <br>
 
 본인 역할<br>
