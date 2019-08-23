@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-yellow.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="http://localhost:3000/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="http://localhost:3000/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="http://localhost:3000/public/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="http://localhost:3000/public/css/freelancer.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>이마트24 음성검색 시스템 관리페이지</title>
+    <style>
+        #mainNav .navbar-nav li.nav-item a.nav-link {
+                color: #fff;
+            }
+    
+            #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+                color: #FFB718;
+            }
+    
+            #mainNav .navbar-nav li.nav-item a.nav-link:active,
+            #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+                color: #fff;
+            }
+    
+            #mainNav .navbar-nav li.nav-item a.nav-link.active {
+                color: #fff;
+            }
+    
+            #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
+                color: #fff;
+                background: #FFB718;
+            }
+    
+            #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
+            #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
+            #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+                color: #fff;
+                background: #FFB718;
+            }
+    
+            .bg-primary {
+                background-color: #E0E3DA !important;
+            }
+    
+            .bg-secondary {
+                background-color: #FFFFF3 !important;
+            }
+    
+            .bg-third {
+                background-color: #566270 !important;
+            }
+    
+            .footer {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+                background-color: #1a252f;
+                color: #fff;
+            }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        table a:link {
+            color: #666;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        table a:visited {
+            color: #999999;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        table a:active,
+        table a:hover {
+            color: #bd5a35;
+            text-decoration: underline;
+        }
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #666;
+            font-size: 12px;
+            text-shadow: 1px 1px 0px #fff;
+            background: #eaebec;
+            margin: 20px;
+            border: #ccc 1px solid;
+
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+
+            -moz-box-shadow: 0 1px 2px #d1d1d1;
+            -webkit-box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 1px 2px #d1d1d1;
+        }
+
+        table th {
+            padding: 15px;
+            border-top: 1px solid #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+
+            background: #ededed;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+            background: -moz-linear-gradient(top, #ededed, #ebebeb);
+        }
+
+        table th:first-child {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        table tr:first-child th:first-child {
+            -moz-border-radius-topleft: 3px;
+            -webkit-border-top-left-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+
+        table tr:first-child th:last-child {
+            -moz-border-radius-topright: 3px;
+            -webkit-border-top-right-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        table tr {
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        table tr td:first-child {
+            text-align: left;
+            padding-left: 20px;
+            border-left: 0;
+        }
+
+        table tr td {
+            padding: 12px;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+
+            background: #fafafa;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+            background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+        }
+
+        table tr.even td {
+            background: #f6f6f6;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+            background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
+        }
+
+        table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        table tr:hover td {
+            background: #f2f2f2;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+            background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            /*optional*/
+            color: #aaa;
+            font-size: .875em;
+        }
+
+        .pagination {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .page {
+            display: inline-block;
+            padding: 0px 9px;
+            margin-right: 4px;
+            border-radius: 3px;
+            border: solid 1px #c0c0c0;
+            background: #e9e9e9;
+            box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .8), 0px 1px 3px rgba(0, 0, 0, .1);
+            font-size: .875em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #717171;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+        }
+
+        .page:hover,
+        .page.gradient:hover {
+            background: #fefefe;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#f0f0f0));
+            background: -moz-linear-gradient(0% 0% 270deg, #FEFEFE, #f0f0f0);
+        }
+
+        .page.active {
+            border: none;
+            background: #616161;
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, .5), 0px 1px 0px rgba(255, 255, 255, .8);
+            color: #f0f0f0;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
+        }
+
+        .page.gradient {
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
+            background: -moz-linear-gradient(0% 0% 270deg, #f8f8f8, #e9e9e9);
+        }
+
+        .pagination.dark {
+            background: #414449;
+            color: #feffff;
+        }
+
+        .page.dark {
+            border: solid 1px #32373b;
+            background: #3e4347;
+            box-shadow: inset 0px 1px 1px rgba(255, 255, 255, .1), 0px 1px 3px rgba(0, 0, 0, .1);
+            color: #feffff;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+        }
+
+        .page.dark:hover,
+        .page.dark.gradient:hover {
+            background: #3d4f5d;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#547085), to(#3d4f5d));
+            background: -moz-linear-gradient(0% 0% 270deg, #547085, #3d4f5d);
+        }
+
+        .page.dark.active {
+            border: none;
+            background: #2f3237;
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, .5), 0px 1px 0px rgba(255, 255, 255, .1);
+        }
+
+        .page.dark.gradient {
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#565b5f), to(#3e4347));
+            background: -moz-linear-gradient(0% 0% 270deg, #565b5f, #3e4347);
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="http://localhost:3000/public/javascripts/speechkitt.js"></script>
+    <script src="http://localhost:3000/public/javascripts/annyang.js"></script>
+    <script src="http://localhost:3000/public/javascripts/speechsynthesis.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav" style="background-color: #5C5B61">
+        <div class="container">
+            <link href="http://localhost:3000/public/css/freelancer.min.css" rel="stylesheet">
+            <link href="http://localhost:3000/public/css/freelancer.min.css" rel="stylesheet">
+            <a class="navbar-brand js-scroll-trigger" href="/"><img src="http://localhost:3000/public/img/logo.png" alt=""></a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/admin">관리페이지</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/admin/product/1">상품관리</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/admin/search">검색기록관리</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br><br><br>
+    <center>
+        <h2 class="mt-4 mb-3 text-center">상품목록 관리페이지</h2>
+    </center>
+
+    <br>
+
+    <center>
+        <table cellspacing='0'>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>위치</th>
+                    <th>가격</th>
+                    <th>카테고리</th>
+                    <th>세부 카테고리</th>
+                    <th>이벤트 여부</th>
+                    <th>제조사</th>
+                    <th>인기도</th>
+                    <th>상세보기</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% data.forEach(function (item,index){ %>
+                <tr>
+                    <td>
+                        <%= item.Name %>
+                    </td>
+                    <td>
+                        <%= item.Location %></a>
+                    </td>
+                    <td>
+                        <%= item.Price %>
+                    </td>
+                    <td>
+                        <%= item.Category %>
+                    </td>
+                    <td>
+                        <%= item.Detail_Category %>
+                    </td>
+                    <td>
+                        <%= item.INFO_Event %>
+                    </td>
+                    <td>
+                        <%= item.Company %>
+                    </td>
+                    <td>
+                        <%= item.Popularity %>
+                    </td>
+                    <td>
+                        <a href="/admin/product_detail/<%= item.Name %>">상세보기</a>
+                    </td>
+                    <td>
+                        <a href="/admin/product_delete/<%= item.Name %>">삭제</a>
+                    </td>
+                </tr>
+                <% })%>
+            </tbody>
+        </table>
+    </center>
+
+    <a href="/admin/product_registration" style="margin-left: 68%; width: 120px">
+        새 상품 등록</a><br>
+
+    <div style="margin-left: 40%">
+        <div class="pagination">
+
+            <%
+        var curSet = paging.curSet
+        var endPage = paging.endPage
+        var startPage = paging.startPage
+        var totalSet = paging.totalSet
+        var totalPage = paging.totalPage
+        var page_list_size = paging.page_list_size
+        var page_size = paging.page_size
+        var curPage = paging.curPage
+        %>
+            <%
+        if(curSet > 1){
+        %>
+            <a href='/admin/product/<%= ( startPage - 1) %>' class="page">이전페이지</a>
+            <%
+        }
+        %>
+            <%
+        for(var i = startPage; i <= endPage; i++){
+        if(i > totalPage){break;}
+        
+        if(i == curPage){
+        %>
+            <a class="page active" href='/admin/product/<%= i %>'>
+                <%= i %>
+            </a>
+            <%
+        }else{
+        %>
+            <a class="page" href='/admin/product/<%= i %>'>
+                <%= i %>
+            </a>
+            <%
+        }
+        %>
+            <%
+        }
+        %>
+            <%
+        if(curSet < totalSet){
+        %>
+            <a href='/admin/product/<%= ( endPage + 1) %>' class="page">다음페이지</a>
+            <%
+        }
+        %>
+        </div>
+    </div>
+
+    <!-- Search Widget -->
+    <form action="/admin/product/1" method="post">
+        <div class="col-md-4 col-md-offset-3 mb-5" style="margin-left:38%">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search_product_name" placeholder="Search for..." required>
+                <span class="input-group-btn">
+                    <button type="submit">Search</button>
+                </span>
+            </div>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
