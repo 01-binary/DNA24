@@ -13,3 +13,7 @@
 4. Ajax 적용<br>
 5. 쿼리문 작성 및 예외처리<br>
 개발언어 : Java script, MySQL
+
+![그림1](https://user-images.githubusercontent.com/15652602/63578442-72689400-c5cb-11e9-9419-ab5c3b0575da.png)
+![그림2](https://user-images.githubusercontent.com/15652602/63578443-73012a80-c5cb-11e9-9ae4-e11be0b0b30d.png)
+![그림3](https://user-images.githubusercontent.com/15652602/63578444-73012a80-c5cb-11e9-8649-0a08731739d0.png)
